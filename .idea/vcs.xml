@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dgy_vue_workspace" vcs="Git" />
     <mapping directory="D:/git_repository_vue/vue_1" vcs="Git" />
   </component>
 </project>
