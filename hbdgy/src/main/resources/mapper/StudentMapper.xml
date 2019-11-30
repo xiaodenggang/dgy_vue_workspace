@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="dgy.hbdgy.mapper.StudentMapper">
+
+    <!-- 根据学生号查询学生相关信息 -->
+    <!-- Student findBySno(String sno); -->
+    <select id="findBySno" resultType="dgy.hbdgy.entity.Student">
+        SELECT * FROM student WHERE sno=#{sno};
+   </select>
+
+    <!-- 根据学生表查询学生的所有相关信息-->
+    <!-- Student findAll(); -->
+    <select id="findAll" resultType="dgy.hbdgy.entity.Student">
+        SELECT * FROM student ;
+   </select>
+
+    <!-- 插入学生信息 -->
+    <!-- Integer insertInfo(); -->
+    <insert id="insertInfo" >
+        INSERT  into student(
+        sno,sname,sage,ssex,sscore
+        ) value (
+        #{sno},#{sname},#{sage},#{ssex},#{sscore}
+        );
+   </insert>
+
+
+</mapper>
