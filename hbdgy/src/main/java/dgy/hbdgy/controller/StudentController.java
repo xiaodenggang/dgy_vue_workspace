@@ -30,9 +30,9 @@ public class StudentController {
     public List<Student> getAll(){
         List<Student> list = new ArrayList<Student>();
         list = studentMapper.findAll();
-        for(Student s : list){
-            System.out.println("list="+s);
-        }
+       // for(Student s : list){
+         //   System.out.println("list="+s);
+       // }
 
         return  list;
     }
@@ -44,5 +44,29 @@ public class StudentController {
        }catch(Exception e){
            System.err.println("插入studennt数据异常");
        }
+    }
+
+    @PostMapping("delete")
+    public void removeInfo(String sno){
+        try{
+            studentMapper.deleteInfo(sno);
+        }catch(Exception e){
+            System.err.println("根据学号删除studennt数据异常");
+        }
+    }
+
+    @CrossOrigin   //解决跨域的问题
+    @RequestMapping("page")
+    public List<Student> getPageAll(int currentPage,int size){
+        List<Student> list = new ArrayList<Student>();
+        //分页数据计算
+        int first = (currentPage-1)*size;
+        int second = currentPage*size;
+        list = studentMapper.findPageAll(first,second);
+        // for(Student s : list){
+        //   System.out.println("list="+s);
+        // }
+
+        return  list;
     }
 }

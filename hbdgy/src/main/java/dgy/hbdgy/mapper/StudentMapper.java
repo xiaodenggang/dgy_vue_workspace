@@ -21,4 +21,10 @@ public interface StudentMapper {
     //插入学生信息
     Integer insertInfo(Student student);
 
+    //根据学号删除相关学生信息
+    Integer deleteInfo(String sno);
+
+    //分页获取学生表中的所有信息
+    List<Student> findPageAll(int first,int second);
+
 }

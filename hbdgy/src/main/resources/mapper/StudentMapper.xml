@@ -26,5 +26,19 @@
         );
    </insert>
 
+    <!--//根据学号删除相关学生信息 -->
+    <!--Integer deleteInfo(String sno); -->
+    <delete id="deleteInfo">
+        DELETE from student where  sno=#{sno};
+
+    </delete>
+
+    <!-- 根据学生表分页查询学生的所有相关信息-->
+    <!-- List<Student> findPageAll(int currentPage,int Size); -->
+    <select id="findPageAll" resultType="dgy.hbdgy.entity.Student">
+        SELECT * FROM student limit #{first},#{second};
+    </select>
+
+
 
 </mapper>
