@@ -2,6 +2,7 @@ package dgy.hbdgy.mapper;
 
 import dgy.hbdgy.entity.Student;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -25,6 +26,9 @@ public interface StudentMapper {
     Integer deleteInfo(String sno);
 
     //分页获取学生表中的所有信息
-    List<Student> findPageAll(int first,int second);
+    List<Student> findPageAll(
+            @Param("first") int first,
+            @Param("second") int second
+    );
 
 }

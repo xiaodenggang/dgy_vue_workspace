@@ -61,11 +61,13 @@ public class StudentController {
         List<Student> list = new ArrayList<Student>();
         //分页数据计算
         int first = (currentPage-1)*size;
-        int second = currentPage*size;
+        int second = size;
         list = studentMapper.findPageAll(first,second);
         // for(Student s : list){
         //   System.out.println("list="+s);
         // }
+        // Result<Student> rs = new Result<Student>();
+
 
         return  list;
     }

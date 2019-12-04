@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="dgy.hbdgy.mapper.MenuMapper">
+
+    <!-- 根据学生表查询学生的所有相关信息-->
+    <!--  List getAllMenu(); -->
+    <select id="getAllMenu" resultType="dgy.hbdgy.entity.Menu">
+        SELECT * FROM menu ;
+    </select>
+
+</mapper>
