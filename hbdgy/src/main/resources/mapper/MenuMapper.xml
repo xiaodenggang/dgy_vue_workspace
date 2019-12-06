@@ -4,7 +4,7 @@
 
 <mapper namespace="dgy.hbdgy.mapper.MenuMapper">
 
-    <!-- 根据学生表查询学生的所有相关信息-->
+    <!-- 根据菜单表查询菜单的所有相关信息-->
     <!--  List getAllMenu(); -->
     <select id="getAllMenu" resultType="dgy.hbdgy.entity.Menu">
         SELECT * FROM menu ;
